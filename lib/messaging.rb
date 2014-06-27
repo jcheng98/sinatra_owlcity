@@ -41,7 +41,7 @@ class Texting
       @tweets.each do |tweet|
       @client.account.messages.create(
         :from => '+18152642023',
-        :to => '+16463061463',
+        :to => ENV[MY_PHONE_NUMBER],
         :body => tweet
       )
       end
@@ -51,7 +51,4 @@ class Texting
 
 end
 
-# new_text = Texting.new
-# new_text.recipient=('+16463061463')
-# new_text.send(account_sid, auth_token)
 
